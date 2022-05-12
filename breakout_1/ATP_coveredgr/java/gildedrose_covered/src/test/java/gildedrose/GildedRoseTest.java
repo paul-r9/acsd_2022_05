@@ -1,5 +1,6 @@
 package gildedrose;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -45,7 +46,8 @@ public class GildedRoseTest {
     @ParameterizedTest(name = "{0} item SellIn decreases each update")
     @CsvSource({"generic item", "Aged Brie", BACKSTAGE_PASS})
     public void NonLegendaryItem_SellInDate_Decreases(String itemName) {
-        GildedRose sut = new GildedRose(createItemArray(itemName, 8, 10));
+        int startingQuality = 10;
+        GildedRose sut = new GildedRose(createItemArray(itemName, 8, startingQuality));
         sut.updateQuality();
         assertEquals(7, sut.items[0].sellIn, "Item sellIn date should decrease by 1 each day");
     }

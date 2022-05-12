@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 //Uncomment the following line to use DiffMerge when Received/Approved differ
-//@UseReporter(DiffMergeReporter.class)
+@UseReporter(DiffMergeReporter.class)
 public class GildedRoseApprovalTests {
 
     @Test
@@ -34,7 +34,7 @@ public class GildedRoseApprovalTests {
         CombinationApprovals.verifyAllCombinations(
                 this::doUpdateQuality,
                 new String[] {"foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert", "Sulfuras, Hand of Ragnaros"},
-                new Integer[] {-1, 0, 5, 10, 11},    // SellIn
+                new Integer[] {-1, 0, 1, 4, 5, 6,  9, 10, 11, 50},    // SellIn
                 new Integer[] { 0, 1, 49, 50 }       // Quality
         );
     }
