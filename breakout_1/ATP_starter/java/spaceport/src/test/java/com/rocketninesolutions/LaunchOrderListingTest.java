@@ -1,14 +1,13 @@
 package com.rocketninesolutions;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class LaunchOrderListingTest {
+class LaunchOrderListingTest {
     // check to see if they are unique that once we have the launch list,
     // e are having the same number, having something with size and checkin the int
 
@@ -17,7 +16,7 @@ public class LaunchOrderListingTest {
 
     //TODO - Use the Stub Recipe to test that launches are sorted correctly
     @Test
-    public void LaunchesAre_NumberedAsReceived_DestinationsAreUnique() {
+    void LaunchesAre_NumberedAsReceived_DestinationsAreUnique() {
         // Arrange
         ISpacelineLaunchInfoProvider mock = new UnorderedLaunchesStub();
 
@@ -31,7 +30,7 @@ public class LaunchOrderListingTest {
     }
 
     @Test
-    public void Launches_Are_Sorted_Correctly_When_Destinations_Are_Unique() {
+    void Launches_Are_Sorted_Correctly_When_Destinations_Are_Unique() {
         //Arrange
         ISpacelineLaunchInfoProvider mock = new UnorderedLaunchesStub();
 
@@ -52,7 +51,7 @@ public class LaunchOrderListingTest {
         );
     }
 
-    private class UnorderedLaunchesStub implements ISpacelineLaunchInfoProvider {
+    private static class UnorderedLaunchesStub implements ISpacelineLaunchInfoProvider {
 
         @Override
         public List<LaunchInfo> getCurrentLaunches() {
