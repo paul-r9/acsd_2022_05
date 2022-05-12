@@ -9,7 +9,7 @@ public class WordyTests
         Assert.Equal(5, Wordy.Answer("What is 5?"));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Addition()
     {
         Assert.Equal(2, Wordy.Answer("What is 1 plus 1?"));
@@ -140,4 +140,10 @@ public class WordyTests
     {
         Assert.Throws<ArgumentException>(() => Wordy.Answer("What is plus 1 2?"));
     }
+    
+    
+    // Justin here
+    // Rameez Here
+    // John here
+    // Osvaldo here
 }

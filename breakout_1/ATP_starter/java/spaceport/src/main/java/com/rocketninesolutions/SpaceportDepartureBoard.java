@@ -19,7 +19,7 @@ public class SpaceportDepartureBoard {
     }
 
     private void sortLaunches() {
-        throw new UnsupportedOperationException("TODO - implement the sorting logic!");
+        //throw new UnsupportedOperationException("TODO - implement the sorting logic!");
     }
 
     private void addNewLaunch(LaunchInfo launchInfo) {
